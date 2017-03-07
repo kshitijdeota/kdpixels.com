@@ -1,0 +1,94 @@
+@import 'normalize';
+@import 'mixins';
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* PAGE HEADER */
+
+.page-header {
+  padding: 20px 30px;
+  min-height: 100vh;
+  width: 250px;
+  float: left;
+  background: #FBFBFB;
+}
+
+.page-content {
+  padding: 20px 30px;
+  min-height: 100vh;
+  width: calc(100% - 250px);
+  float: right;
+  background: #FDFDFD;
+}
+
+.logo {
+  display: block;
+  color: #888;
+  
+  @include e('title') {
+    letter-spacing: 2px;
+    font: {
+      family: "Roboto", sans-serif;
+      weight: bold;
+      size: 2.1rem;
+    }
+    
+  }
+
+  @include e('image') {
+    height: 55px;
+    width: 48px;
+    vertical-align: middle;
+  }
+
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+  @include e('item') {
+
+    &:hover {
+      background: #D6D6D6;
+    }
+    
+    @include m('active') {
+      background: #E6E6E6;
+    }
+
+  }
+
+  @include e('link') {
+    padding: 10px 15px;
+    display: block;
+    color: #888;
+
+    &:hover {
+      color: #676767;
+    }
+  
+  }
+
+}

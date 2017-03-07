@@ -1,23 +1,21 @@
 {
-  "name": "browser-sync-jekyll",
-  "version": "0.0.0",
-  "description": "A starter project including full setup for Jekyll, GulpJS, SASS & BrowserSync",
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "jekyll-gulp-sass-browser-sync =============================",
   "main": "gulpfile.js",
+  "devDependencies": {
+    "browser-sync": "^2.8.2",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shane Osbourne",
-  "license": "ISC",
-  "devDependencies": {
-    "browser-sync": "^1.3.7",
-    "gulp": "^3.8.8",
-    "gulp-autoprefixer": "1.0.0",
-    "gulp-pug": "^3.2.0",
-    "gulp-sass": "^2.1.0"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync.git"
+    "url": "git+https://github.com/kshitijdeota/kshitijdeota.github.io.git"
   },
   "keywords": [
     "jekyll",
@@ -25,8 +23,10 @@
     "sass",
     "browsersync"
   ],
+  "author": "KD",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
+    "url": "https://github.com/kshitijdeota/kshitijdeota.github.io/issues"
   },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://github.com/kshitijdeota/kshitijdeota.github.io#readme"
 }
