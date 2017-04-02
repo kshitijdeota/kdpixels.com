@@ -163,7 +163,7 @@ a {
     @include e('title') {
       display: block;
       position: absolute;
-      top: 50%;
+      top: 40%;
       width: 100%;
       margin: 0;
       color: $smoke;
@@ -171,7 +171,20 @@ a {
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 2px;
-      transform: translateY(-50%);
+      transform: translateY(-40%);
+
+      @include e('link') {
+        display: block;
+
+        @include e('icon') {
+          display: inline-block;
+          margin-bottom: 10px;
+        }
+
+        @include e('text') {
+          display: block;
+        }
+      }
     }
     
     @include e('category') {
@@ -182,7 +195,7 @@ a {
       letter-spacing: 1px;
       text-transform: uppercase;
       transform: translateY(-50%);
-      bottom: 30%;
+      bottom: 25%;
 
       @include e('link') {
         color: lighten($smoke, 30%);
