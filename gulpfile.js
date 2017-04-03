@@ -34,7 +34,7 @@ gulp.task('sass', function () {
   return gulp.src('_sass/main.scss')
     .pipe(plumber())
     .pipe(sass())
-    // .pipe(cleancss())
+    .pipe(cleancss())
     .pipe(autoprefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7']))
     .pipe(gulp.dest('assets/css'));
 });

@@ -29,12 +29,19 @@
   display: inline-block;
   border: 1px solid $dust;
   border-radius: 3px;
-  padding: 7px 20px;
+  padding: 10px 20px;
   text-align: center;
+  cursor: pointer;
+  color: $smoke;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  line-height: 1;
+  text-transform: uppercase;
 
   &:hover {
     background: darken(white, 5%);
     box-shadow: 0 2px 2px 0 darken(white, 10%);
+    color: $blood;
   }
 
   &:active {

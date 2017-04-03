@@ -267,3 +267,9 @@ template {
 [hidden] {
   display: none;
 }
+
+html { box-sizing: border-box; }
+
+*,
+*:after,
+*:before { box-sizing: inherit; }

@@ -1,31 +1,23 @@
 @import "normalize";
 @import "variables";
-@import "typography";
 @import "mixins";
-
-html {
-  box-sizing: border-box;
-}
-
-*,
-*:after,
-*:before {
-  box-sizing: inherit;
-}
-
-body {
-  background: darken(white, 3.5%);
-}
+@import "typography";
+@import "colors";
 
 a {
-  color: darken($smoke, 50%);
   text-decoration: none;
   text-shadow: 0 1px 1px rgba($smoke, .1);
+  transition: all .2s ease-in-out;
 
   &:hover {
-    color: $blood;
     text-shadow: none;
+    transition: all .2s ease-in-out;
   }
+}
+
+address {
+  font-style: normal;
+  text-transform: uppercase;
 }
 
 /* PAGE HEADER */
@@ -49,15 +41,14 @@ a {
 
 .logo {
   display: block;
-  color: #888;
   padding: 20px 0;
   
   @include e('title') {
     letter-spacing: 2px;
+    text-shadow: none;
     font: {
-      family: "Roboto", sans-serif;
-      weight: bold;
-      size: 2.1rem;
+      weight: normal;
+      size: 3rem;
     }
   }
 
@@ -84,7 +75,6 @@ a {
   @include e('link') {
     padding: 3px 7px;
     display: block;
-    color: #888;
   }
 }
 
@@ -102,7 +92,6 @@ a {
 
   @include e('content') {
     font-size: 2.1rem;
-    color: $smoke;
     margin: 0 15%;
   }
 }
@@ -120,10 +109,6 @@ a {
       margin-right: 20px;
       text-transform: uppercase;
       font-size: 1.2rem;
-
-      @include e('link') {
-
-      }
     }
   }
 }
@@ -133,7 +118,6 @@ a {
 
   @include e('item') {
     position: relative;
-    background: pink;
     max-width: 31.3334%;
     margin: 1%;
     float: left;
@@ -144,7 +128,6 @@ a {
     }
 
     @include e('info') {
-      background: rgba(white, .85);
       position: absolute;
       top: 20px;
       right: 20px;
@@ -153,7 +136,6 @@ a {
       opacity: 0;
       transition: opacity .2s ease-in-out;
     }
-
 
     @include e('image') {
       display: block;
@@ -166,7 +148,6 @@ a {
       top: 40%;
       width: 100%;
       margin: 0;
-      color: $smoke;
       font-size: 1.4rem;
       text-align: center;
       text-transform: uppercase;
@@ -196,10 +177,94 @@ a {
       text-transform: uppercase;
       transform: translateY(-50%);
       bottom: 25%;
+    }
+  }
+}
 
-      @include e('link') {
-        color: lighten($smoke, 30%);
+.contact {
+  margin: 4% 1%;
+  @extend %clearfix;
+
+  @include e('details') {
+    float: left;
+    width: 50%;
+
+    @include e('name') {
+      font-size: 2.4rem;
+      text-transform: uppercase;
+      margin: 0 0 20px 0;
+      letter-spacing: 1px;
+    }
+
+    @include e('address') {
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+    
+      @include e('electronic') {
+        margin: 20px 0;
       }
+    }  
+
+    @include e('social') {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      @include e('item') {
+        display: inline-block;
+
+        @include e('link') {
+          display: block;
+          height: 24px;
+          width: 24px;
+          opacity: .5;
+          margin-right: 5px;
+
+          &:hover {
+            opacity: .7;
+          }
+          
+          @include e('image') {
+            border-radius: 4px;
+            display: block;
+            max-width: 100%;
+            height: 24px;
+            width: 24px;
+          }
+        }
+      }
+    }  
+  }
+
+  @include e('form') {
+    float: left;
+    width: 50%;
+    padding-left: 30px;
+
+    @include e('label') {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    
+    @include e('input') {
+      min-width: 300px;
+      border: 5px solid rgba($dust, .15);
+      border-radius: 3px;
+      padding: 5px 7px;
+      display: block;
+      margin-bottom: 20px;
+    }
+
+    @include e('submit') {
+      @extend %button;
+    }
+
+    @include e('message') {
+      min-width: 300px;
+      min-height: 200px;
     }
   }
 }
