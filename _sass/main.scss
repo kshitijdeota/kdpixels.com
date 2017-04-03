@@ -46,23 +46,26 @@ address {
   @include e('title') {
     letter-spacing: 2px;
     text-shadow: none;
+    text-align: center;
     font: {
       weight: normal;
       size: 3rem;
     }
+    
+    @include e('image') {
+      height: 55px;
+      width: 48px;
+      margin-bottom: 20px;
+      vertical-align: middle;
+    }
   }
 
-  @include e('image') {
-    height: 55px;
-    width: 48px;
-    vertical-align: middle;
-  }
 }
 
 .nav-menu {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 0 10px;
   
   @include e('item') {
     margin-bottom: 10px;
