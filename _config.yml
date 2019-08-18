@@ -1,8 +1,0 @@
-name: KD Pixels
-email: kshitij@kdpixels.com
-markdown: redcarpet
-baseurl: "/"
-url: "https://github.com/kshitijdeota/"
-repository: kshitijdeota/kshitijdeota.github.io
-permalink: /:title/
-exclude: ["node_modules", "package.json", "CNAME", "Gemfile", "Gemfile.lock", "README.md", "gulpfile.js"]
