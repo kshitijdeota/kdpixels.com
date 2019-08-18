@@ -1,1 +1,1 @@
-# Website | Blog | Portfolio of Kshitij Deota
+# Website | Blog | Portfolio
