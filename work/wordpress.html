@@ -1,0 +1,30 @@
+---
+layout: work
+title: WordPress
+description: Some WordPress page description here.
+permalink: /work/wordpress/
+menu: secondary
+order: 5
+---
+<!-- CONTENT -->
+<section class="kd-content-wrapper">
+	<div class="container">
+		<div class="kd-post-wrapper">
+			{% for category in site.categories %}
+			    {% for post in category[1] %}
+				{% if category[0] == "wordpress" and post.type == 'work' %}
+					<div class="kd-post">
+						<a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
+						<div>
+							<a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+							<p>{{ post.excerpt }}</p>
+							<a class="kd-button" href="{{ post.url }}">Read more</a>
+						</div>
+					</div>
+				{% endif %}
+			    {% endfor %}
+			{% endfor %}
+		</div>
+	</div>
+</section>
+<!-- CONTENT ENDS -->

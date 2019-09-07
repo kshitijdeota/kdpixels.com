@@ -1,0 +1,12 @@
+<div class="kd-nav-secondary">
+	<div class="container">
+		<nav class="kd-nav">
+			<a href="/notebook/">Notebook</a>
+			{% for node in site.pages | sort:"order" %}
+			{% if node.menu == 'notebook' %}
+			<a {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
+			{% endif %}
+			{% endfor %}
+		</nav>
+	</div>
+</div>

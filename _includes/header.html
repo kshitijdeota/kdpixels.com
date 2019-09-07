@@ -1,0 +1,19 @@
+<body class="home">
+	<div class="page">
+		<!-- HEADER -->
+		<header class="kd-header">
+			<div class="container">
+				<div id="kd-branding" class="kd-branding" role="branding">
+					<div>
+						<a id="logo" href="/" title="Home"><img src="{% link assets/images/kdpixels-color.png %}" alt="Site Logo"></a>
+						{% include nav-primary.html %}
+					</div>
+
+					<nav class="kd-nav kd-nav-social">
+						{% for item in site.data.settings.social %}
+							<a href="{{ item.link }}" title="{{ item.name }}" target="_blank"><img class="kd-social-image" src="{{ site.url }}{{ item.folder }}{{ item.file }}.png" alt="{{ item.name }}"></a>
+						{% endfor %}
+					</nav>
+				</div>
+			</div>
+		</header>

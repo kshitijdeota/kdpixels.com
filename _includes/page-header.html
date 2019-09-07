@@ -1,0 +1,11 @@
+<header class="kd-page-header">
+	<div class="container">
+		<h1 class="kd-page-title">
+			{{ page.title }}
+			{% if page.description %}
+				: {{ page.description }}
+			{% endif %}
+		</h1>
+		{% include breadcrumbs.html %}
+	</div>
+</header>

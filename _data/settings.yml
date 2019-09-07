@@ -1,0 +1,26 @@
+# Change 'comments' to true for Disqus comments
+disqus:
+  comments: false
+  disqus_shortname: 'kdpixels-1'
+
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+google-ID: 'UA-112060364-2'
+
+social:
+- {name: 'Instagram', folder: '/assets/images/social/', file: 'instagram', link: 'https://www.instagram.com/kshitijdeota/'}
+- {name: 'Behance', folder: '/assets/images/social/', file: 'behance', link: 'https://www.behance.net/kshitijdeota'}
+- {name: 'Twitter', folder: '/assets/images/social/', file: 'twitter', link: 'https://twitter.com/kshitijdeota'}
+- {name: 'Skype', folder: '/assets/images/social/', file: 'skype', link: 'skype:kkdevta?chat'}
+- {name: 'Github', folder: '/assets/images/social/', file: 'github', link: 'https://github.com/kshitijdeota'}
+- {name: 'Email', folder: '/assets/images/social/', file: 'email', link: 'mailto:kshitij@kdpixels.com'}
+
+# Customize site text
+pagination:
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+sharing_button_prompt: 'Feel free to share!'
+
+related_posts: 'You may also enjoy...'
+
+post_date_prefix: 'Posted on'

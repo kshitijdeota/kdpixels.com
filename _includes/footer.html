@@ -1,0 +1,56 @@
+		<!-- FOOTER -->
+		<div class="kd-footer-wrapper">
+			<div class="container">
+				<footer class="kd-footer">
+					<div>
+						<h3>KD Pixels</h3>
+						<nav>
+							<a href="/about/">About</a>
+							<a href="/notebook/">Notebook</a>
+							<a href="/faq/">F.A.Q.</a>
+						</nav>
+					</div>
+
+					<div>
+						<h3>Discover</h3>
+						<nav>
+							<a href="#">WordPress</a>
+							<a href="#">Brand Identity</a>
+							<a href="#">Illustrations</a>
+						</nav>
+					</div>
+
+					<div>
+						<h3>Policies</h3>
+						<nav>
+							<a href="#">Licence Agreement</a>
+							<a href="#">Payments &amp; Returns</a>
+							<a href="#">Privacy Policy</a>
+						</nav>
+					</div>
+				</footer>
+			</div>
+		</div>
+		<!-- FOOTER ENDS -->
+
+		<!-- COLOPHON -->
+		<div class="kd-colophon-wrapper">
+			<div class="container">
+				<div class="kd-colophon">
+					<p>Copyright &copy; 2019 KD Pixels.</p>
+
+					<nav class="kd-nav-social kd-nav">
+						{% for item in site.data.settings.social %}
+							<a href="{{ item.link }}" title="{{ item.name }}" target="_blank"><img class="kd-social-image" src="{{ site.url }}{{ item.folder }}{{ item.file }}.png" alt="{{ item.name }}"></a>
+						{% endfor %}
+					</nav>
+				</div>
+			</div>
+		</div>
+		<!-- COLOPHON ENDS -->
+	</div><!-- .page -->
+	<script src="{% link assets/js/highlight.pack.js %}"></script>
+	<script src="{% link assets/js/script.js %}"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>
