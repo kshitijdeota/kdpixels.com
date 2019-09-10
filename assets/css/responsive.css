@@ -1,17 +1,35 @@
 @media only screen and (max-width: 735px) {
-	body {
-	}
+/*
+	1. HEADER
+	2. NAVIGATION
+	3. FOOTER
+	4. MENU RESPONSE
+	5. HERO
+	6. POSTS
+	7. POST SINGLE
+	8. ABOUT
+*/
+
+	body { padding: 0; }
+	.container { padding: 0 40px; }
 	.kd-header {
 		position: fixed;
 		background: #FFF;
 		height: 100vh; }
+	.kd-header .container { padding: 0; }
 	.kd-branding {
 		display: grid;
 		grid-template-columns: 1fr;
 		align-items: center;
 		border-bottom: 1px solid rgba(0,0,0,0.1); }
-	.kd-logo {
-		margin: 0 auto; }
+	.kd-logo { margin: 0 auto; }
+	.kd-page-header { padding-top: 100px; }
+	.kd-page-header h1 {
+		font-size: 19px;
+		line-height: 1.4567; }
+
+	/* ``` NAVIGATION ``` */
+
 	.kd-nav-primary {
 		width: 100%;
 		padding: 0 40px 15px 40px;
@@ -47,17 +65,68 @@
 	.kd-button-menu.open span:last-child {
 		transform: rotate(-45deg);
 		top: -3px; }
-	.kd-header {
-		height: 44px; }
-	.kd-nav-primary,
-	.kd-nav-social {
-		display: none; }
 
-	.kd-hero {
+	.kd-colophon .kd-nav-social {
+		position: absolute;
+		display: flex;
+		bottom: 44px;
+		left: 30px; }
+
+	/* ``` MENU RESPONSE ``` */
+
+	.kd-header { height: 44px; }
+	.kd-nav-social,
+	.kd-nav-primary { display: none; }
+
+	/* ``` FOOTER ``` */
+
+	.kd-footer {
 		display: grid;
-		grid-template-columns: 1fr;
-		grid-column-gap: 30px;
-		grid-row-gap: 30px;
-		align-items: center; }
+		grid-template-columns: 1fr; }
+	.kd-footer > div {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		margin: 0 0 20px 0; }
+	.kd-footer h3 {
+		margin: 0;
+		padding-bottom: 10px; }
+	.kd-footer h3:after {
+		content: '+';
+		float: right;
+		font-size: 14px;
+		font-weight: normal;
+		margin-top: -2px;
+		margin-right: 8px;
+		transition: transform .3s ease; }
 
+	/* ``` HOME ``` */
+
+	.kd-hero-wrapper {
+		padding: 70px 0 30px 0;
+		height: auto; }
+	.kd-hero { grid-template-columns: 1fr; }
+	.kd-hero h2 { font-size: 19px; }
+
+	/* ``` POSTS ``` */
+
+	.kd-post-wrapper {
+		column-count: 1;
+		column-gap: 0;
+		padding: 50px 0; }
+
+	/* ``` POST SINGLE ``` */
+
+	.kd-single { grid-template-columns: 1fr; }
+	.kd-single h2 { font-size: 19px; }
+	.kd-single h3 { font-size: 17px; }
+	.kd-single h4 { font-size: 15px; }
+	.kd-single pre { max-width: 320px; }
+	.kd-single .content { margin-bottom: 50px; }
+
+	/* ``` ABOUT ``` */
+
+	.kd-about,
+	.kd-about .skills { grid-template-columns: 1fr; }
+	.kd-about h2 { font-size: 19px; }
+	.kd-about > div { padding: 50px 0 0 0; }
+	.kd-portrait { margin-bottom: 70px; }
 }
