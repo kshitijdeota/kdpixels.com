@@ -1,0 +1,63 @@
+@media only screen and (max-width: 735px) {
+	body {
+	}
+	.kd-header {
+		position: fixed;
+		background: #FFF;
+		height: 100vh; }
+	.kd-branding {
+		display: grid;
+		grid-template-columns: 1fr;
+		align-items: center;
+		border-bottom: 1px solid rgba(0,0,0,0.1); }
+	.kd-logo {
+		margin: 0 auto; }
+	.kd-nav-primary {
+		width: 100%;
+		padding: 0 40px 15px 40px;
+		font-size: 14px; }
+	.kd-nav-primary a {
+		border-bottom: 1px solid rgba(0,0,0,0.1);
+		padding: 18px 0;
+		display: block; }
+	.kd-nav-social {
+		text-align: center;
+		margin-top: 50px; }
+	.kd-button-menu {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		position: absolute;
+		z-index: 999;
+		height: 44px;
+		width: 44px;
+		left: 0;
+		cursor: pointer; }
+	.kd-button-menu span {
+		position: relative;
+		background: rgba(0,0,0,0.5);
+		display: block;
+		height: 1px;
+		width: 17px;
+		margin: 3px 0; }
+	.kd-button-menu.open span {
+		transform: rotate(45deg);
+		top: 4px; }
+	.kd-button-menu.open span:last-child {
+		transform: rotate(-45deg);
+		top: -3px; }
+	.kd-header {
+		height: 44px; }
+	.kd-nav-primary,
+	.kd-nav-social {
+		display: none; }
+
+	.kd-hero {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-column-gap: 30px;
+		grid-row-gap: 30px;
+		align-items: center; }
+
+}

@@ -4,17 +4,17 @@
 		<header class="kd-header">
 			<div class="container">
 				<div id="kd-branding" class="kd-branding" role="branding">
-					<div>
-						<a id="logo" href="/" title="Home">
-						<svg enable-background="new 0 0 147 200" viewBox="0 0 147 200" xmlns="http://www.w3.org/2000/svg">
-							<path d="m0 55.2 75.7 43.5v86.6l-75.7-43.5z" opacity=".1"/>
-							<path d="m147 57.4-71.3 41.3v86.6l71.3-41.9z" opacity=".3"/>
-							<path d="m70.9 13.3-70.9 41.9 75.7 43.5 71.3-41.3z" fill="#fff"/>
-							<path d="m75.7 98.7 71.3-41.3-76.1-44.1-70.9 41.9v86.6l75.7 43.5 71.3-41.9v-20.3l-71.3 41.3-58.3-33.5v-65.6l53.5-31.5 38.5 22.5-52.5 32z" fill="#333"/>
+					<div class="kd-logo">
+						<a href="/" title="Home">
+						<svg enable-background="new 0 0 200 200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+							<path d="m14.6 48.7 88 50.6v100.7l-88-50.6z" opacity=".1"/>
+							<path d="m185.4 51.3-82.9 48v100.7l82.9-48.7z" opacity=".3"/>
+							<path d="m102.6 99.3 82.9-48-88.5-51.3-82.4 48.7v100.7l88 50.6 82.9-48.7v-23.6l-82.9 48-67.8-38.9v-76.4l62.2-36.6 44.7 26.2-61 37.2z" fill="#333"/>
 						</svg>
 						</a>
-						{% include nav-primary.html %}
 					</div>
+
+					{% include nav-primary.html %}
 
 					<nav class="kd-nav kd-nav-social">
 						{% for item in site.data.settings.social %}
@@ -22,6 +22,10 @@
 							<img class="kd-social-image" src="{{ site.url }}{{ item.folder }}{{ item.file }}.png" alt="{{ item.name }}">
 						</a>
 						{% endfor %}
+					</nav>
+					<nav class="kd-button-menu" href="#">
+						<span></span>
+						<span></span>
 					</nav>
 				</div>
 			</div>
