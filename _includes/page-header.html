@@ -4,7 +4,7 @@
 			<h1 class="kd-page-title">{{ page.title }}</h1>
 
 			{% if page.type == "work" or page.title == "Work" %}
-			<div class="kd-nav-secondary">
+			<div id="kd-nav-secondary" class="kd-nav-secondary">
 				<div class="container">
 					<nav class="kd-nav">
 						{% for node in site.pages | sort:"order" %}
@@ -15,7 +15,7 @@
 					</nav>
 				</div>
 			</div>
-			<nav class="kd-button-menu" href="#">
+			<nav id="kd-buns-secondary" class="kd-button-menu" href="#">
 				<span></span>
 				<span></span>
 			</nav>
@@ -33,7 +33,7 @@
 					</nav>
 				</div>
 			</div>
-			<nav class="kd-button-menu" href="#">
+			<nav id="kd-buns-secondary" class="kd-button-menu" href="#">
 				<span></span>
 				<span></span>
 			</nav>
