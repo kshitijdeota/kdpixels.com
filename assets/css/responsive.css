@@ -129,12 +129,10 @@
 	.kd-nav-secondary .container {
 		display: block;
 		height: 100vh;
-		transition: all .8s ease-in-out;
 	}
 	.kd-nav-secondary .kd-nav {
 		background: #333;
 		padding: 20px 0;
-		transition: all .8s ease-in-out;
 	}
 	.kd-nav-secondary .kd-nav a:last-child {
 		border-bottom: none;
@@ -221,13 +219,19 @@
 
 	.kd-footer {
 		display: grid;
-		grid-template-columns: 1fr; }
+		grid-template-columns: 1fr;
+		padding-bottom: 60px }
 	.kd-footer > div {
 		border-bottom: 1px solid rgba(0,0,0,0.1);
-		margin: 0 0 20px 0; }
+		padding: 0 0 4px 0;
+		margin: 0; }
 	.kd-footer h3 {
+		padding: 10px 0;
 		margin: 0;
-		padding-bottom: 10px; }
+		cursor: pointer; }
+	.kd-footer h3:hover {
+		color: #666;
+	}
 	.kd-footer h3:after {
 		content: '+';
 		float: right;
@@ -236,7 +240,9 @@
 		margin-top: -2px;
 		margin-right: 8px;
 		transition: transform .3s ease; }
-
+	.kd-footer nav { display: none; }
+	.kd-footer nav a { padding: 4px 0; }
+	.rotate45:after { transform: rotate(45deg); }
 	.kd-colophon { padding: 10px 0; }
 	.kd-colophon .kd-nav-social { display: flex; }
 

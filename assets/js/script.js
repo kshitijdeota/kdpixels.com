@@ -27,4 +27,9 @@ $(document).ready(function() {
 		$("html, body").toggleClass('noscroll');
 		$(".kd-nav-secondary").toggle();
 	});
+
+	$(".kd-footer h3").click(function() {
+		$(this).next('nav').slideToggle();
+		$(this).toggleClass('rotate45');
+	});
 });
