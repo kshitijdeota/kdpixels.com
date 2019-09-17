@@ -73,8 +73,12 @@
 	/* ``` NAVIGATION ``` */
 
 	.kd-nav-primary {
+		background: #FFF;
+		display: block;
+		height: 100vh;
 		width: 100%;
 		padding: 0 40px 15px 40px;
+		margin: 0;
 		font-size: 14px; }
 	.kd-nav-primary a {
 		border-bottom: 1px solid rgba(0,0,0,0.1);
@@ -82,8 +86,19 @@
 		display: block; }
 
 	.kd-nav-social {
-		text-align: center;
-		margin-top: 50px; }
+		margin-top: 50px;
+		text-align: center; }
+
+	.kd-branding .kd-nav-social {
+		display: flex;
+		position: absolute;
+		margin-top: 0;
+		left: 30px;
+		top: 40vh; }
+	.kd-branding .kd-nav-social a {
+		display: inline-block;
+	}
+
 	.kd-button-menu {
 		display: flex;
 		justify-content: center;
@@ -124,19 +139,17 @@
 		display: block;
 		width: 100vw;
 		top: 43px;
-		z-index: 999;
-	}
+		z-index: 999; }
 	.kd-nav-secondary .container {
 		display: block;
-		height: 100vh;
-	}
+		height: 100vh; }
 	.kd-nav-secondary .kd-nav {
 		background: #333;
-		padding: 20px 0;
-	}
-	.kd-nav-secondary .kd-nav a:last-child {
-		border-bottom: none;
-	}
+		padding: 20px 0; }
+	.kd-nav-secondary .kd-nav a:last-child { border-bottom: none; }
+
+	.kd-nav-primary,
+	.kd-branding .kd-nav-social,
 	.kd-nav-secondary { display: none; }
 
 	/* ``` MENU RESPONSE ``` */
@@ -145,18 +158,7 @@
 		background: #FFF;
 		height: 44px; }
 
-	.kd-nav-social,
-	.kd-nav-primary { display: none; }
-
 	.noscroll { overflow: hidden; }
-	.slideout {
-		background: #FFF;
-		display: block;
-		margin: 0;
-		transition: all .2s ease-in-out; }
-	.slidetray {
-		display: flex;
-		padding-bottom: 100vh; }
 
 	.kd-colophon-wrapper { margin-bottom: 0; }
 	.kd-colophon { padding: 0; }

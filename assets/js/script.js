@@ -18,14 +18,14 @@ $(document).ready(function() {
 	$("#kd-buns-primary").click(function() {
 		$(this).toggleClass('open');
 		$("html, body").toggleClass('noscroll');
-		$(".kd-nav-primary").toggleClass('slideout');
-		$(".kd-nav-social").toggleClass('slideout slidetray');
+		$(".kd-nav-primary").slideToggle();
+		$(".kd-branding .kd-nav-social").fadeToggle();
 	});
 
 	$("#kd-buns-secondary").click(function() {
 		$(this).toggleClass('open');
 		$("html, body").toggleClass('noscroll');
-		$(".kd-nav-secondary").toggle();
+		$(".kd-nav-secondary").slideToggle();
 	});
 
 	$(".kd-footer h3").click(function() {
