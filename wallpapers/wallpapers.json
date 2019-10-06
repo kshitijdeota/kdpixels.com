@@ -1,15 +1,17 @@
 {
     "Wallpapers":
     [
-	    {
-			"url": "https://kdpixels.com/wallpapers/blue-marbles.jpg",
-			"thumbUrl": "https://kdpixels.com/wallpapers/blue-marbles-thumb.jpg",
-			"name": "Marbles"
-	    },
-	    {
-			"url": "https://kdpixels.com/wallpapers/brooklyn-bridge.jpg?raw=true",
-			"thumbUrl": "https://kdpixels.com/wallpapers/brooklyn-bridge-thumb.jpg?raw=true",
-			"name": "Brooklyn Bridge"
-		}
+	{
+	"author": "Taken from gadgetraid",
+	"url": "https://picsum.photos/id/878/200/300",
+	"thumbUrl": "https://picsum.photos/id/878/200/300",
+	"name": "Marbles"
+	},
+	{
+	"author": "Taken from gadgetraid",
+	"url": "https://picsum.photos/id/878/200/300",
+	"thumbUrl": "https://picsum.photos/id/878/200/300",
+	"name": "Brooklyn Bridge"
+	}
     ]
 }
