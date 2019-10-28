@@ -1,17 +1,18 @@
 ---
 layout: page
 type: notebook
-title: Jekyll
-permalink: /notebook/jekyll/
+title: MacOS
+permalink: /notebook/macos/
 menu: notebook
-order: 3
+order: 2
 ---
+<!-- CONTENT -->
 <section class="kd-content-wrapper">
 	<div class="container">
 		<div class="kd-post-wrapper">
 			{% for category in site.categories %}
 			    {% for post in category[1] %}
-			    {% if category[0] == "jekyll" and post.type == 'notebook' %}
+			    {% if category[0] == "macos" and post.type == 'notebook' %}
 					<div class="kd-post">
 						<a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/notebook/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
 						<div>
@@ -26,3 +27,4 @@ order: 3
 		</div>
 	</div>
 </section>
+<!-- CONTENT ENDS -->
