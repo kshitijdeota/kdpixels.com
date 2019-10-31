@@ -13,11 +13,10 @@ html { font-size: 106.25%; }
 
 body {
 	position: relative;
-	font-family: "Fira Sans", sans-serif;
-	font-size: 14px;
+	font-family: "SF Pro Text", -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+	font-size: 15px;
 	font-weight: 400;
 	line-height: 1.33341;
-	letter-spacing: -.01em;
 	color: #888; }
 
 h1,
@@ -27,7 +26,7 @@ h4,
 h5,
 h6 {
 	color: #121212;
-	font-family: "Open Sans", sans-serif;
+	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	font-weight: 600;
 	margin: 0 0 20px 0; }
 h1 { font-size: 48px; line-height: 1.2; }
@@ -38,7 +37,7 @@ h5 { font-size: 17px; line-height: 1.5; }
 h6 { font-size: 14px; line-height: 1.6; }
 
 a {
-	color: #333;
+	color: red;
 	text-decoration: none;
 	opacity: .9;
 	transition: all .2s ease-in-out; }
@@ -70,7 +69,7 @@ li { margin-bottom: 5px; }
 
 .kd-header {
 	position: relative;
-	background: #FFF;
+	background: rgba(0,0,0,0.05);
 	width: 100%;
 	z-index: 9999; }
 .kd-branding {
@@ -124,13 +123,18 @@ li { margin-bottom: 5px; }
 
 .kd-nav {
 	display: inline-block;
-	font-size: 12px;
+	font-size: 13px;
 	line-height: 1;
 	letter-spacing: -.01em; }
 .kd-nav a {
 	display: inline-block;
-	padding: 7px 20px; }
+	padding: 7px 20px;
+	color: #333; }
 .kd-nav span { padding: 7px 0; }
+.kd-nav a:hover,
+.kd-nav a.current {
+	opacity: .7;
+}
 
 svg#home {
 	margin-bottom: 0px;
@@ -155,15 +159,15 @@ svg#home {
 	height: 44px;
 	width: 44px;
 	padding: 0; }
-.kd-nav-social img {
-	height: 20px;
-	width: 20px; }
+.kd-nav-social svg {
+	height: 25px;
+	width: 25px; }
 
 /* ``` FOOTER ``` */
 
 .kd-footer-wrapper {
 	font-size: 12px;
-	background: #F8F8F8; }
+	background: #F1F2F3; }
 .kd-footer {
 	display: grid;
 	grid-template-columns: 160px 160px 160px;
@@ -175,42 +179,84 @@ svg#home {
 .kd-footer a {
 	display: block;
 	margin-bottom: 5px;
+	color: #333;
 	opacity: .5; }
 .kd-footer a:hover { text-decoration: underline; }
 
 .kd-colophon-wrapper {
-	background: #D8D8D8; }
+	background: #EAEBEC; }
 .kd-colophon {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	letter-spacing: normal;
 	font-size: 12px;
-	padding: 0; }
+	padding: 5px 0; }
 .kd-colophon p { margin-bottom: 0; }
 
 /* ``` HERO ``` */
 
+.kd-intro {
+	background: #AAA url(../images/statue-of-liberty-usa.jpg) no-repeat center center;
+	background-size: cover;
+	padding: 200px 0;
+	margin: 30px;
+	color: white;
+	text-align: left;
+}
+
+.kd-intro-title  {
+	font-size: 56px;
+	line-height: 1.2;
+	color: white;
+}
+
+.kd-small-text {
+	font-size: 27px;
+}
+
+.kd-cta {
+	background: #F6F6F6;
+	padding: 140px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.kd-cta-title:first-child {
+	font-size: 43px;
+}
+.kd-cta-title:not(h2:first-child) {
+	margin-bottom: 0;
+}
+
+.kd-cta-button {}
+
 .kd-hero-wrapper {
-	background: #F8F8F8 url(../images/hero-bg.jpg) no-repeat center center;
+	background: #F1F2F3;
 	background-size: cover;
 	display: grid;
 	align-items: center;
-	height: 100vh; }
+	margin: 30px; }
 .kd-hero {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-gap: 30px;
-	align-items: center; }
-.kd-hero > div {
-	background: #F8F8F8;
-	border: 5px solid #FFF;
-	padding: 20px 30px;
-	box-shadow: 0 20px 30px 0 rgba(0,0,0,0.3); }
-.kd-hero h2 {
-	font-size: 19px;
-	margin-bottom: 15px; }
-.kd-hero p { font-size: 12px; }
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	margin: 0 auto;
+	width: 1000px;
+	color: #000;
+}
+.kd-hero-image img {
+	display: block;
+	max-width: 660px;
+	transform: translateX(-190px);
+}
+
+.kd-hero-content {
+	transform: translateX(-100px);
+}
+.kd-hero h2 { font-size: 34px; }
+.kd-hero h2:first-child { margin: 0; }
+.kd-hero p { font-size: 19px; }
 
 /* ``` POSTS ``` */
 

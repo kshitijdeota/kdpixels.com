@@ -296,17 +296,6 @@
 	display: inline-block;
 	position: relative;
 	letter-spacing: -.022em; }
-.kd-button:after {
-	position: relative;
-	display: inline-block;
-	background: url(../images/icon-arrow.png) no-repeat;
-	content: " ";
-	width: 22px;
-	height: 6px;
-	margin: 5px 5px 5px 10px;
-	vertical-align: text-bottom;
-	opacity: 1;
-	transition: all .2s ease-in-out; }
 
 .seperator {
 	border: 0;
