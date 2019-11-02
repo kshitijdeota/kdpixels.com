@@ -7,23 +7,33 @@ order: 2
 ---
 <!-- CONTENT -->
 <section class="kd-content-wrapper">
-	<div class="container">
-		<div class="kd-post-wrapper">
-			{% for category in site.categories %}
-			    {% for post in category[1] %}
-			    {% if category[0] == "work" %}
-					<div class="kd-post">
-						<a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
-						<div>
-							<a href="{{ post.url }}"><h2>{{ post.title }}</h2></a>
+	<div class="kd-portfolio-wrapper">
+					<div class="kd-portfolio-sizer"></div>
+		{% for category in site.categories %}
+			{% for post in category[1] %}
+				{% if category[0] == "work" and post.style == "wide" %}
+					<div class="kd-portfolio kd-portfolio-wide">
+						<div class="kd-portfolio-content">
+							<a class="kd-portfolio-link" href="{{ post.url }}"></a>
+							<p class="kd-portfolio-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+							<h2>{{ post.title }}</h2>
 							<p>{{ post.excerpt }}</p>
-							<a class="kd-button" href="{{ post.url }}">Read more</a>
+						</div>
+						<a class="kd-portfolio-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
+					</div>
+				{% elsif category[0] == "work" and post.style == "tall" %}
+					<div class="kd-portfolio">
+						<a class="kd-portfolio-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
+						<div class="kd-portfolio-content">
+							<a class="kd-portfolio-link" href="{{ post.url }}"></a>
+							<p class="kd-portfolio-meta">{{ post.date | date: '%B %d, %Y' }}</p>
+							<h2>{{ post.title }}</h2>
+							<p>{{ post.excerpt }}</p>
 						</div>
 					</div>
 				{% endif %}
-			    {% endfor %}
 			{% endfor %}
-		</div>
+		{% endfor %}
 	</div>
 </section>
 <!-- CONTENT ENDS -->

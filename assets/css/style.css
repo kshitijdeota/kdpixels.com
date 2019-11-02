@@ -17,7 +17,7 @@ body {
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 1.33341;
-	color: #888; }
+	color: #454545; }
 
 h1,
 h2,
@@ -47,11 +47,9 @@ a.current {
 	opacity: .35;
 	transition: all .2s ease-in-out; }
 
-img {
-	display: inline-block;
-	max-width: 100%; }
+img { display: inline-block; }
 
-p { margin: 0 0 15px 0; }
+p {	margin: 0 0 15px 0; }
 
 ul {
 	margin: 0;
@@ -65,11 +63,16 @@ li { margin-bottom: 5px; }
 	max-width: 1000px;
 	margin: 0 auto; }
 
+
+
+
+
+
 /* ``` HEADER ``` */
 
 .kd-header {
 	position: relative;
-	background: rgba(0,0,0,0.05);
+	background: #F6F6F6;
 	width: 100%;
 	z-index: 9999; }
 .kd-branding {
@@ -91,49 +94,65 @@ li { margin-bottom: 5px; }
 	height: 25px;
 	width: 25px; }
 
+
+
+
+
+
+
 /* ``` STICKY HEADER STUFF ``` */
 
-.kd-page-header-wrapper { height: 106px; }
+.kd-page-header-wrapper { height: 78px; }
 .kd-page-header {
-	background: #CCC url(../images/hero-bg.jpg) no-repeat center center;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
-	border-top: 1px solid rgba(0,0,0,0.1);
-	padding: 30px 0; }
+	background: rgba(255, 255, 255, 0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+	border-top: 1px solid rgba(0,0,0,0.05);
+	padding: 0; }
 .kd-page-header .container {
 	display: grid;
 	grid-template-columns: auto auto;
 	justify-content: space-between;
-	align-items: center;
-	padding: 0 0 0 15px; }
-.kd-page-header a { color: #FFF; }
+	align-items: center; }
+.kd-page-header .kd-nav a {
+	font-size: 13px;
+	color: #333; }
 .kd-page-header h1 {
-	color: #FFF;
-	font-size: 19px;
-	font-weight: 300;
+	font-size: 34px;
+	font-weight: 400;
 	line-height: 2.1;
 	margin-bottom: 0;
 	padding: 2.5px 0; }
 
 .kd-page-header.sticky {
+	-webkit-backdrop-filter: saturate(180%) blur(20px);
+	backdrop-filter: saturate(180%) blur(20px);
 	left: 0;
 	padding: 0;
 	z-index: 999; }
+.kd-page-header.sticky h1 {
+	font-size: 19px;
+}
+
+
+
+
+
+
 
 /* ``` NAVIGATION ``` */
 
 .kd-nav {
 	display: inline-block;
 	font-size: 13px;
-	line-height: 1;
-	letter-spacing: -.01em; }
+	line-height: 1; }
 .kd-nav a {
 	display: inline-block;
 	padding: 7px 20px;
-	color: #333; }
+	color: #111; }
 .kd-nav span { padding: 7px 0; }
 .kd-nav a:hover,
 .kd-nav a.current {
-	opacity: .7;
+	opacity: .5;
 }
 
 svg#home {
@@ -160,14 +179,19 @@ svg#home {
 	width: 44px;
 	padding: 0; }
 .kd-nav-social svg {
-	height: 25px;
-	width: 25px; }
+	height: 20px;
+	width: 20px; }
+
+
+
+
+
+
+
 
 /* ``` FOOTER ``` */
 
-.kd-footer-wrapper {
-	font-size: 12px;
-	background: #F1F2F3; }
+.kd-footer-wrapper { font-size: 12px; }
 .kd-footer {
 	display: grid;
 	grid-template-columns: 160px 160px 160px;
@@ -194,7 +218,13 @@ svg#home {
 	padding: 5px 0; }
 .kd-colophon p { margin-bottom: 0; }
 
-/* ``` HERO ``` */
+
+
+
+
+
+
+/* ``` INTRO ``` */
 
 .kd-intro {
 	background: #AAA url(../images/statue-of-liberty-usa.jpg) no-repeat center center;
@@ -215,60 +245,166 @@ svg#home {
 	font-size: 27px;
 }
 
+
+
+
+
+
+
+/* ``` CTA ``` */
+
 .kd-cta {
 	background: #F6F6F6;
-	padding: 140px 0;
+	padding: 100px 0;
 	margin: 0 auto;
 	text-align: center;
 }
 
-.kd-cta-title:first-child {
+.kd-cta-title {
 	font-size: 43px;
 }
-.kd-cta-title:not(h2:first-child) {
+.kd-cta p:not(p:first-child) {
 	margin-bottom: 0;
+	font-size: 19px;
+}
+.kd-cta p:last-child {
+	margin-top: 20px;
 }
 
 .kd-cta-button {}
 
+
+
+
+
+
+/* ``` HERO ``` */
+
 .kd-hero-wrapper {
-	background: #F1F2F3;
+	position: relative;
+	overflow: hidden;
+	background: #333;
 	background-size: cover;
 	display: grid;
 	align-items: center;
+	padding: 270px 0;
 	margin: 30px; }
 .kd-hero {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
 	align-items: center;
 	margin: 0 auto;
 	width: 1000px;
-	color: #000;
-}
-.kd-hero-image img {
-	display: block;
-	max-width: 660px;
-	transform: translateX(-190px);
+	color: #FFF;
 }
 
-.kd-hero-content {
-	transform: translateX(-100px);
-}
-.kd-hero h2 { font-size: 34px; }
+.kd-hero h2 { font-size: 34px; color: #FFF; }
 .kd-hero h2:first-child { margin: 0; }
-.kd-hero p { font-size: 19px; }
+.kd-hero p { font-size: 19px;
+	max-width: 360px; }
+
+.kd-macbook-image {
+	position: absolute;
+	left: 560px;
+	top: 100px;
+	background: url(../images/macbook-air.png) no-repeat left top;
+	background-size: cover;
+	width: 1000px;
+	height: 588px;
+}
+.kd-macbook-preview {
+	position: absolute;
+	top: 37px;
+	left: 112px;
+	background: url(../images/preview.jpg);
+	background-size: 774px 486px;
+	height: 486px;
+	width: 774px;
+}
+
+
+
+
+
+
+
+/* ``` PORTFOLIO ``` */
+.work .kd-content-wrapper {
+	background: #F6F6F6;
+	padding: 30px 0 0 0;
+}
+.kd-portfolio-wrapper { margin: 0 0 0 30px; }
+.kd-portfolio-sizer { width: 23%; }
+.kd-portfolio {
+	background: #FFF;
+	overflow: hidden;
+	height: 500px;
+	width: 23%;
+	margin-bottom: 30px; }
+.kd-portfolio-wide {
+	display: grid;
+	grid-template-columns: 1fr 500px;
+	align-items: center;
+	overflow: hidden;
+	margin-bottom: 30px;
+	height: 500px;
+	width: 73%; }
+
+.kd-portfolio-image { line-height: 0; }
+
+.kd-portfolio-wide .kd-portfolio-image {
+	position: relative;
+	width: 500px;
+	height: 500px;}
+.kd-portfolio-wide img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	max-height: 500px;
+	width: 500px;
+}
+.kd-portfolio-image {
+	position: relative;
+	display: block;
+	overflow: hidden; }
+.kd-portfolio-image:hover { opacity: 1; }
+.kd-portfolio img { opacity: .8; transform: scale(1); transition: .4s all ease-in-out; }
+.kd-portfolio:hover img { opacity: 1; transform: scale(1.05); transition: .4s all ease-in-out; }
+.kd-portfolio h2 {
+	font-size: 28px;
+	font-weight: 400;
+	line-height: 1.4em;
+	margin-bottom: 10px;
+	color: #111; }
+ .kd-portfolio-meta {
+ 	font-size: 13px;
+ 	color: #AAA;
+ 	 margin: 0 0 5px 0; }
+.kd-portfolio-link {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+.kd-portfolio-content {
+	display: block;
+	padding: 40px 50px; }
+
+
+
+
+
 
 /* ``` POSTS ``` */
 
 .kd-post-wrapper {
-	column-count: 3;
+	display: grid;
 	column-gap: 30px;
 	padding: 70px 0; }
 .kd-post {
-	background: #FFF;
-	display: inline-block;
-	margin-bottom: 20px;
-	border: 5px solid rgba(0,0,0,0.05); }
+	margin-bottom: 20px; }
 .kd-post-image {
 	display: block;
 	margin-bottom: 20px; }

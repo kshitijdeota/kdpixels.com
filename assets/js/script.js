@@ -33,3 +33,12 @@ $(document).ready(function() {
 		$(this).toggleClass('rotate45');
 	});
 });
+
+var elem = document.querySelector('.kd-portfolio-wrapper');
+var msnry = new Masonry( elem, {
+  // options
+  itemSelector: '.kd-portfolio',
+  gutter: 30,
+  columnWidth: '.kd-portfolio-sizer',
+  percentPosition: true
+});
