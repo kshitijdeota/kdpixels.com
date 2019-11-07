@@ -1,15 +1,16 @@
 ---
 layout: page
-title: Work
-permalink: /work/
-menu: primary
-order: 2
+type: work
+title: Web Design
+permalink: /work/web-design/
+menu: secondary
+order: 3
 ---
 <p class="kd-portfolio-intro container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit officia, magnam aspernatur. Fugiat, eveniet sapiente vero quasi neque, cum optio a corrupti dolorem aut voluptatibus sit et, at excepturi dolorum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor recusandae porro placeat nisi impedit quasi itaque ullam doloremque consectetur natus sunt neque dolorem unde, voluptate, eos aperiam accusantium. Sequi, quidem?</p>
 <div class="kd-portfolio-wrapper">
-    {% for category in site.categories %}
+{% for category in site.categories %}
     {% for post in category[1] %}
-    {% if category[0] == "work" %}
+    {% if category[0] == "web-design" and post.type == 'work' %}
     <div class="kd-portfolio">
         <a class="kd-portfolio-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
         <div class="kd-portfolio-content">
@@ -20,5 +21,5 @@ order: 2
     </div>
     {% endif %}
     {% endfor %}
-    {% endfor %}
+{% endfor %}
 </div>

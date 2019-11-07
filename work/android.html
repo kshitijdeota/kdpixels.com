@@ -6,25 +6,20 @@ permalink: /work/android/
 menu: secondary
 order: 1
 ---
-<!-- CONTENT -->
-<section class="kd-content-wrapper">
-    <div class="container">
-        <div class="kd-post-wrapper">
-            {% for category in site.categories %}
-                {% for post in category[1] %}
-                    {% if category[0] == "android" and post.type == 'work' %}
-                        <div class="kd-post">
-                            <a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
-                            <div>
-                                <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
-                                <p>{{ post.excerpt }}</p>
-                                <a class="kd-button" href="{{ post.url }}">Read more</a>
-                            </div>
-                        </div>
-                    {% endif %}
-                {% endfor %}
-            {% endfor %}
-        </div>
-    </div>
-</section>
-<!-- CONTENT ENDS -->
+<p class="kd-portfolio-intro container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit officia, magnam aspernatur. Fugiat, eveniet sapiente vero quasi neque, cum optio a corrupti dolorem aut voluptatibus sit et, at excepturi dolorum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor recusandae porro placeat nisi impedit quasi itaque ullam doloremque consectetur natus sunt neque dolorem unde, voluptate, eos aperiam accusantium. Sequi, quidem?</p>
+<div class="kd-portfolio-wrapper">
+{% for category in site.categories %}
+	{% for post in category[1] %}
+	{% if category[0] == "android" and post.type == 'work' %}
+	<div class="kd-portfolio">
+		<a class="kd-portfolio-image" href="{{ post.url }}"><img src="/assets/images/featured/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
+		<div class="kd-portfolio-content">
+			<a class="kd-portfolio-link" href="{{ post.url }}"></a>
+			<h2 class="kd-portfolio-title">{{ post.title }}</h2>
+			<p class="kd-portfolio-excerpt">{{ post.excerpt }}</p>
+		</div>
+	</div>
+	{% endif %}
+	{% endfor %}
+{% endfor %}
+</div>
