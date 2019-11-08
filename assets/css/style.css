@@ -380,16 +380,24 @@ li { margin-bottom: 5px; }
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 30px;
-	padding: 70px 0; }
+	padding-bottom: 100px; }
+.kd-post-intro { padding: 100px 0; }
 .kd-post {
 	background: #FFF;
-	margin-bottom: 20px; }
+	margin-bottom: 20px;
+	transition: .2s all ease-in-out; }
+.kd-post:hover {
+	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
+	opacity: 0.8;
+	transition: .2s all ease-in-out; }
+.kd-post-image { opacity: 1; }
+.kd-post-image:hover { opacity: 1; }
 .kd-post-content {
 	display: block;
 	font-size: 13px;
 	padding: 30px 30px;
-	color: #333;
-}
+	color: #333; }
+.kd-post-content:hover { opacity: 1; }
 .kd-post h2 {
 	font-size: 19px;
 	line-height: 1.413em;
