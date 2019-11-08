@@ -461,3 +461,20 @@ li { margin-bottom: 5px; }
 	grid-template-columns: 1fr 1fr; }
 
 .kd-about-list-item { margin-bottom: 3px; }
+
+/* ``` CONTACT ``` */
+
+.kd-contact {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 100px;
+	align-items: center;
+	padding: 100px 0;
+}
+.kd-contact-image {
+	display: block;
+	max-width: 100%;
+}
+.kd-contact-title {
+	font-size: 24px;
+}
