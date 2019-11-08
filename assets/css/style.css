@@ -140,7 +140,7 @@ li { margin-bottom: 5px; }
 
 /* ``` PAGE HEADER ``` */
 
-.kd-page-header-wrapper { height: 117px; }
+.kd-page-header-wrapper { height: 103px; }
 .kd-page-header {
 	background: rgba(255, 255, 255, 0.1);
 	border-bottom: 1px solid rgba(0,0,0,0.05);
@@ -155,11 +155,11 @@ li { margin-bottom: 5px; }
 	font-size: 11px;
 	text-transform: uppercase;
 	letter-spacing: 1px;
-	color: #333; }
+	color: #666; }
 .kd-page-header h1 {
 	font-size: 24px;
 	color: #454545;
-	line-height: 2.1;
+	line-height: 1.5;
 	margin-bottom: 0;
 	padding: 2.5px 0; }
 
@@ -169,11 +169,9 @@ li { margin-bottom: 5px; }
 	-webkit-backdrop-filter: saturate(180%) blur(20px);
 	backdrop-filter: saturate(180%) blur(20px);
 	left: 0;
-	padding: 0;
+	padding: 5px 0;
 	z-index: 999; }
-.kd-page-header.sticky h1 {
-	font-size: 19px;
-}
+.kd-page-header.sticky h1 { font-size: 19px; }
 
 
 
@@ -225,7 +223,7 @@ li { margin-bottom: 5px; }
 /* ``` INTRO ``` */
 
 .kd-intro {
-	background: #AAA url(../images/statue-of-liberty-usa.jpg) no-repeat center center;
+	background: #333 url(../images/statue-of-liberty-usa.jpg) no-repeat center center;
 	background-size: cover;
 	padding: 200px 0;
 	margin: 30px;
@@ -325,15 +323,11 @@ li { margin-bottom: 5px; }
 
 /* ``` PORTFOLIO ``` */
 
-.kd-portfolio-intro {
-	background: #F6F6F6;
-	padding: 100px 0;
-}
 .kd-portfolio-wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 40px;
-	padding: 0 30px 100px 30px; }
+	padding: 100px 30px; }
 .kd-portfolio {
 	background: #FFF;
 	overflow: hidden;
@@ -380,18 +374,17 @@ li { margin-bottom: 5px; }
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 30px;
-	padding-bottom: 100px; }
-.kd-post-intro { padding: 100px 0; }
+	padding: 100px 0; }
+
 .kd-post {
 	background: #FFF;
 	margin-bottom: 20px;
 	transition: .2s all ease-in-out; }
 .kd-post:hover {
 	box-shadow: 0 1px 3px 0 rgba(0,0,0,0.3);
-	opacity: 0.8;
 	transition: .2s all ease-in-out; }
+.kd-post:hover .kd-post-image { opacity: .5; }
 .kd-post-image { opacity: 1; }
-.kd-post-image:hover { opacity: 1; }
 .kd-post-content {
 	display: block;
 	font-size: 13px;
@@ -399,7 +392,7 @@ li { margin-bottom: 5px; }
 	color: #333; }
 .kd-post-content:hover { opacity: 1; }
 .kd-post h2 {
-	font-size: 19px;
+	font-size: 17px;
 	line-height: 1.413em;
 	margin-bottom: 10px; }
 

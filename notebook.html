@@ -6,23 +6,20 @@ menu: primary
 order: 3
 ---
 <div class="container">
-    <div class="kd-post-intro">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi atque nihil maiores velit, necessitatibus eius nulla omnis sed iusto est, tempore unde delectus porro ipsa incidunt veritatis ab saepe deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis architecto fuga saepe. Fugiat animi fugit similique perspiciatis laudantium eveniet nam sequi cum! Consequatur, ipsa in id sint, velit voluptas ab.
-    </div>
-    <div class="kd-post-wrapper">
-        {% for category in site.categories %}
-            {% for post in category[1] %}
-            {% if category[0] == "notebook" %}
-                <div class="kd-post">
-                    <a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/notebook/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
-                    <a class="kd-post-content" href="{{ post.url }}">
-                        <h2 class="kd-post-title">{{ post.title }}</h2>
-                        <p>{{ post.excerpt }}</p>
-                    </a>
-                </div>
-            {% endif %}
-            {% endfor %}
-        {% endfor %}
-    </div>
+	<div class="kd-post-wrapper">
+		{% for category in site.categories %}
+			{% for post in category[1] %}
+			{% if category[0] == "notebook" %}
+				<div class="kd-post">
+					<a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/notebook/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
+					<a class="kd-post-content" href="{{ post.url }}">
+						<h2 class="kd-post-title">{{ post.title }}</h2>
+						<p>{{ post.excerpt }}</p>
+					</a>
+				</div>
+			{% endif %}
+			{% endfor %}
+		{% endfor %}
+	</div>
 </div>
 <!-- CONTENT ENDS -->
