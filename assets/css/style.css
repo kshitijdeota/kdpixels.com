@@ -328,6 +328,7 @@ li { margin-bottom: 5px; }
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-gap: 40px;
 	padding: 100px 30px; }
+.kd-portfolio-intro { padding-top: 70px; }
 .kd-portfolio {
 	background: #FFF;
 	overflow: hidden;
