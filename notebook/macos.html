@@ -6,7 +6,6 @@ permalink: /notebook/macos/
 menu: notebook
 order: 2
 ---
-<!-- CONTENT -->
 <section class="kd-content-wrapper">
     <div class="container">
         <div class="kd-post-wrapper">
@@ -15,11 +14,11 @@ order: 2
                 {% if category[0] == "macos" and post.type == 'notebook' %}
                     <div class="kd-post">
                         <a class="kd-post-image" href="{{ post.url }}"><img src="/assets/images/notebook/{{ post.featured }}" alt="{{ post.featured-alt }}"></a>
-                        <div>
-                            <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+                        <a class="kd-post-content" href="{{ post.url }}">
+                            <h3>{{ post.title }}</h3>
                             <p>{{ post.excerpt }}</p>
-                            <a class="kd-button" href="{{ post.url }}">Read more</a>
-                        </div>
+                            <button title="click to read the complete article">Read Article</button>
+                        </a>
                     </div>
                 {% endif %}
                 {% endfor %}
@@ -27,4 +26,3 @@ order: 2
         </div>
     </div>
 </section>
-<!-- CONTENT ENDS -->
