@@ -19,7 +19,7 @@
                         {% assign pages = site.pages | sort:"order" %}
                         {% for node in pages %}
                         {% if node.menu == 'primary' %}
-                        <a {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
+                        <a {% if page.url contains node.permalink %}class="current"{% endif %} {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
                         {% endif %}
                         {% endfor %}
                     </nav>

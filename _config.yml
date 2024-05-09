@@ -18,9 +18,8 @@ theme: null
 show_drafts: false
 
 sass:
-  sass_dir: assets/css
-  style: :nested
+  style: compressed
+  style: nested
 
 plugins:
-  - jekyll-feed
   - paginate: 5

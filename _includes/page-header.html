@@ -7,9 +7,10 @@
             <div id="kd-nav-secondary" class="kd-nav-secondary">
                 <div class="container">
                     <nav class="kd-nav">
+                        <a {% if '/work/' == page.url %}class="current"{% endif %} href='/work/'>All</a>
                         {% for node in site.pages | sort:"order" %}
                         {% if node.menu == 'secondary' %}
-                        <a {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
+                        <a {% if page.url contains node.permalink %}class="current"{% endif %} {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
                         {% endif %}
                         {% endfor %}
                     </nav>
@@ -25,10 +26,10 @@
             <div class="kd-nav-secondary">
                 <div class="container">
                     <nav class="kd-nav">
-                        <a {% if '/notebook/' == page.url %}class="current"{% endif %} href='/notebook/'>Blog Home</a>
+                        <a {% if '/notebook/' == page.url %}class="current"{% endif %} href='/notebook/'>All</a>
                         {% for node in site.pages | sort:"order" %}
                         {% if node.menu == 'notebook' %}
-                        <a {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
+                        <a {% if page.url contains node.permalink %}class="current"{% endif %} {% if node.url == page.url %}class="current"{% endif %} href='{{node.url}}'>{{node.title}}</a>
                         {% endif %}
                         {% endfor %}
                     </nav>
