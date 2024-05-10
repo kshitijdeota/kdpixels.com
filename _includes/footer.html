@@ -54,8 +54,8 @@
         </div>
     <!-- COLOPHON ENDS -->
     </div><!-- .page -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script rel="javascript">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer async></script>
+    <script type="text/javascript" defer>
         window.onscroll = function() {stickyHeader()};
         var header = document.getElementById("kd-page-header");
         function stickyHeader() {
@@ -69,28 +69,30 @@
             }
         }
 
-        var bunsPrimary = $("#kd-buns-primary");
-        var bunsSecondary = $("#kd-buns-secondary");
+        if (document.readyState !== 'loading') {
+            $(window).on('load', function($) {
+                var bunsPrimary = $("#kd-buns-primary");
+                var bunsSecondary = $("#kd-buns-secondary");
 
-        $(document).ready(function() {
-            $("#kd-buns-primary").click(function() {
-                $(this).toggleClass('open');
-                $("html, body").toggleClass('noscroll');
-                $(".kd-nav-primary").slideToggle();
-                $(".kd-branding .kd-nav-social").fadeToggle();
-            });
+                $("#kd-buns-primary").click(function() {
+                    $(this).toggleClass('open');
+                    $("html, body").toggleClass('noscroll');
+                    $(".kd-nav-primary").slideToggle();
+                    $(".kd-branding .kd-nav-social").fadeToggle();
+                });
 
-            $("#kd-buns-secondary").click(function() {
-                $(this).toggleClass('open');
-                $("html, body").toggleClass('noscroll');
-                $(".kd-nav-secondary").slideToggle();
-            });
+                $("#kd-buns-secondary").click(function() {
+                    $(this).toggleClass('open');
+                    $("html, body").toggleClass('noscroll');
+                    $(".kd-nav-secondary").slideToggle();
+                });
 
-            $(".kd-footer h3").click(function() {
-                $(this).next('nav').slideToggle();
-                $(this).toggleClass('rotate45');
+                $(".kd-footer h3").click(function() {
+                    $(this).next('nav').slideToggle();
+                    $(this).toggleClass('rotate45');
+                });
             });
-        });
+        }
     </script>
 
 </body>
